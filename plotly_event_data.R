@@ -25,7 +25,7 @@ jsCode2 <- "shinyjs.plotlyGetTraces =  function(id,inputName='tracesPlot1'){
     }"
 ui <- fluidPage(
     useShinyjs(),
-    extendShinyjs(text = jsCode2),
+    extendShinyjs(text = jsCode2, functions = c('plotlyGetTraces')),
     div(
         plotlyOutput("plot"),
         style = "border: solid black 1px"
